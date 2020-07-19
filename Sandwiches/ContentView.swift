@@ -9,13 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    var sandwiches: [Sandwich] = []
+    
     var body: some View {
-        Text("Hello, World!")
+        List(sandwiches) { sandwich in
+            Image(sandwich.thumbnailName)
+            
+            VStack(alignment: .leading) {
+                Text(sandwich.name)
+                Text("\(sandwich.ingredientCount) ingredients")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(sandwiches: testData)
     }
 }
