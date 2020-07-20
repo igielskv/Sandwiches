@@ -37,6 +37,7 @@ struct SandwichDetail: View {
                 .font(Font.headline.smallCaps())
                 .background(Color.red)
                 .foregroundColor(.yellow)
+                .transition(.move(edge: .bottom))
             }
         }
         .navigationBarTitle(sandwich.name)
