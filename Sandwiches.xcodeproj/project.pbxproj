@@ -15,6 +15,7 @@
 		9F27A0EF24C47D73008706AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F27A0ED24C47D73008706AE /* LaunchScreen.storyboard */; };
 		9F27A0F724C48309008706AE /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27A0F624C48309008706AE /* Sandwich.swift */; };
 		9F930D8F24C4F51000775BB0 /* SandwichDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F930D8E24C4F51000775BB0 /* SandwichDetail.swift */; };
+		9F97948B24C59723003C3F57 /* SandwichStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97948A24C59723003C3F57 /* SandwichStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9F27A0F024C47D73008706AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F27A0F624C48309008706AE /* Sandwich.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
 		9F930D8E24C4F51000775BB0 /* SandwichDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandwichDetail.swift; sourceTree = "<group>"; };
+		9F97948A24C59723003C3F57 /* SandwichStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandwichStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				9F27A0E624C47D72008706AE /* ContentView.swift */,
 				9F930D8E24C4F51000775BB0 /* SandwichDetail.swift */,
 				9F27A0F624C48309008706AE /* Sandwich.swift */,
+				9F97948A24C59723003C3F57 /* SandwichStore.swift */,
 				9F27A0E824C47D73008706AE /* Assets.xcassets */,
 				9F27A0ED24C47D73008706AE /* LaunchScreen.storyboard */,
 				9F27A0F024C47D73008706AE /* Info.plist */,
@@ -154,6 +157,7 @@
 			files = (
 				9F27A0E324C47D72008706AE /* AppDelegate.swift in Sources */,
 				9F27A0E524C47D72008706AE /* SceneDelegate.swift in Sources */,
+				9F97948B24C59723003C3F57 /* SandwichStore.swift in Sources */,
 				9F27A0F724C48309008706AE /* Sandwich.swift in Sources */,
 				9F930D8F24C4F51000775BB0 /* SandwichDetail.swift in Sources */,
 				9F27A0E724C47D72008706AE /* ContentView.swift in Sources */,
