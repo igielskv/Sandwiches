@@ -17,6 +17,8 @@ struct ContentView: View {
                 ForEach(store.sandwiches) { sandwich in
                     SandwichCell(sandwich: sandwich)
                 }
+                .onMove(perform: moveSandwiches)
+                .onDelete(perform: deleteSandwiches)
                 
                 HStack {
                     Spacer()
@@ -26,9 +28,28 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Sandwiches")
+            .navigationBarItems(leading: Button("Add", action: makeSandwich), trailing: EditButton())
             
             Text("Select a sandwich")
                 .font(.largeTitle)
+        }
+    }
+    
+    func makeSandwich() {
+        withAnimation {
+            store.sandwiches.append(Sandwich(name: "Patty melt", ingredientCount: 3))
+        }
+    }
+    
+    func moveSandwiches(from: IndexSet, to: Int) {
+        withAnimation {
+            store.sandwiches.move(fromOffsets: from, toOffset: to)
+        }
+    }
+    
+    func deleteSandwiches(offsets: IndexSet) {
+        withAnimation {
+            store.sandwiches.remove(atOffsets: offsets)
         }
     }
 }
