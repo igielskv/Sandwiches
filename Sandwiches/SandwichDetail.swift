@@ -14,6 +14,8 @@ struct SandwichDetail: View {
     
     var body: some View {
         VStack {
+            Spacer(minLength: 0)
+            
             Image(sandwich.imageName)
                 .resizable()
                 .aspectRatio(contentMode: zoomed ? .fill : .fit)
@@ -23,9 +25,18 @@ struct SandwichDetail: View {
                     }
                 }
             
-            HStack {
-                Image(systemName: "flame.fill")
-                Text("Spicy")
+            Spacer(minLength: 0)
+            
+            if sandwich.isSpicy && !zoomed {
+                HStack {
+                    Spacer()
+                    Label("Spicy", systemImage: "flame.fill")
+                    Spacer()
+                }
+                .padding(.all)
+                .font(Font.headline.smallCaps())
+                .background(Color.red)
+                .foregroundColor(.yellow)
             }
         }
         .navigationBarTitle(sandwich.name)
@@ -35,8 +46,30 @@ struct SandwichDetail: View {
 
 struct SandwichDetail_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            SandwichDetail(sandwich: testData[0])
+        Group {
+            NavigationView {
+                SandwichDetail(sandwich: testData[1])
+            }
+            NavigationView {
+                SandwichDetail(sandwich: testData[0])
+            }
+        }
+    }
+}
+
+struct Label: View {
+    let text: String
+    let image: Image
+    
+    init(_ text: String, systemImage: String) {
+        self.text = text
+        self.image = Image(systemName: systemImage)
+    }
+    
+    var body: some View {
+        HStack {
+            image
+            Text(text)
         }
     }
 }
